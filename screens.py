@@ -34,6 +34,11 @@ class screens:
 
             if self.args[i] == "del":
                 self.deleteScreen(self.setScreenName(self.args[i+1]))
+                
+            if self.args[i] == "help" or len(self.args)==1:
+                print("add [screen name] adds new screen") 
+                print("fix [screen name] fix screens.js") 
+                print("del [screen name] delete screen")  
             
     def deleteScreen(self,name):
          if os.path.exists(self.path+"/screens/"+name):
